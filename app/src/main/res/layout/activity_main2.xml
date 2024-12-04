@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linaspurple"
+    tools:context=".MainActivity2">
+
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+            android:id="@+id/rules_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The player must guess whether the next card drawn will be higher or lower than the current card.\n\nIf the card is an Ace, it is typically considered high.\nCards are ranked as follows:\n2 to 10 are valued at their face value.\nJacks are 11, Queens are 12, and Kings are 13.\n\nNext Card: The dealer reveals the next card from the deck.\n\nIf the player's guess was correct, they continue, and the new card becomes the current card.\nIf the guess was wrong, the game ends for that round.\n\nWinning:\nThe player can continue guessing for as long as they keep guessing correctly.\nThe game continues until a wrong guess is made.\nSome variations allow players to keep playing multiple rounds, with each correct guess earning points."
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:lineSpacingExtra="4dp"
+            android:gravity="start|top"
+            android:padding="8dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/rounded_black_box" />
+
+    </ScrollView>
+
+            <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="16dp" />/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

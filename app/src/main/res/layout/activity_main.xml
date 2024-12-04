@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linaspurple">
+
+
+        <FrameLayout
+            android:id="@+id/card_frame"
+            android:layout_width="329dp"
+            android:layout_height="425dp"
+            android:background="@drawable/rounded_black_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+            android:id="@+id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Kort"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp" />
+        </FrameLayout>
+
+            <Button
+            android:id="@+id/button_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RULES"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"/>
+
+            <TextView
+            android:id="@+id/high_low_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="HIGH and LOW"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_rules" />
+
+    <Button
+        android:id="@+id/button_high"
+        android:layout_width="123dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/black"
+        android:text="High"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/button_low"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_frame" />
+
+    <Button
+        android:id="@+id/button_low"
+        android:layout_width="121dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/black"
+        android:text="Low"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_high"
+        app:layout_constraintTop_toBottomOf="@id/card_frame" />
+
+    <TextView
+            android:id="@+id/result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/button_low"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
